@@ -1,0 +1,38 @@
+@import url("./reset.css");
+
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+  max-width: 500px;
+  margin: auto;
+}
+
+header,
+nav,
+.box,
+aside,
+footer {
+  background-color: #ddd;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Optional colors for better visibility */
+header { background-color: #6c5ce7; color: white; }
+nav { background-color: #00b894; color: white; }
+.box:nth-child(3) { background-color: #fab1a0; }
+.box:nth-child(4) { background-color: #ff7675; }
+.box:nth-child(5) { background-color: #fd79a8; }
+aside { background-color: #0984e3; color: white; }
+footer { background-color: #2d3436; color: white; }
+

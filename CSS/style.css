@@ -7,9 +7,10 @@ body {
   padding: 0;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
+/* Mobile-first layout */
+.container {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   padding: 10px;
   max-width: 500px;
@@ -17,22 +18,87 @@ body {
 }
 
 header,
-nav,
-.box,
+footer,
 aside,
-footer {
-  background-color: #ddd;
+article {
   padding: 20px;
   text-align: center;
   font-weight: bold;
 }
 
-/* Optional colors for better visibility */
-header { background-color: #6c5ce7; color: white; }
-nav { background-color: #00b894; color: white; }
-.box:nth-child(3) { background-color: #fab1a0; }
-.box:nth-child(4) { background-color: #ff7675; }
-.box:nth-child(5) { background-color: #fd79a8; }
-aside { background-color: #0984e3; color: white; }
-footer { background-color: #2d3436; color: white; }
+/* Optional colors for visibility */
+header {
+  background-color: #8e2674;  /* deep purple */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+footer {
+  background-color: #e67e22; /* <-- orange */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+aside.left {
+  background-color: #0984e3;
+  color: white;
+}
+aside.right {
+  background-color: #74b9ff;
+  color: white;
+}
+article {
+  background-color: #55efc4;
+}
+.column {
+  background-color: #d63031;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* === Desktop Layout (1024px and up) === */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .middle-section {
+    display: flex;
+    gap: 10px;
+  }
+
+  aside.left,
+  aside.right {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  article {
+    flex: 2;
+    background-color: #4caf50;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .column {
+    background-color: #d63d61;
+    color: white;
+    padding: 10px;
+    flex: 1;
+    min-width: 80px;
+    text-align: center;
+  }
+}
 
